@@ -16,6 +16,7 @@ This shows:
 ## Rooms Configuration
 
 Default Variables:
+
       - light_filter_type: reject
       - media_filter_type: reject
       - climate_filter_type: reject
