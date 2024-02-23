@@ -30,10 +30,9 @@ Copy this to your lovelace in raw config editor:
 ### Decluttering Card Templates
 
 
-
+{% raw %}
 
 ```
-{% raw %}
 decluttering_templates:
   status_card:
     default:
@@ -1786,8 +1785,10 @@ decluttering_templates:
                 entity: '[[climate]]'
                 attribute: hvac_action
                 value: 'off'
-{% endraw %}
+
 ```
+
+{% endraw %}
 
 </details>
 
