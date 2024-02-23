@@ -13,6 +13,10 @@ aux_links_new_tab: true
   
 color_scheme: dark
 
+favicon_ico: "/images/auto-dash.png"
+
+logo: "/images/auto-dash.png"
+
 
 # +--------------------------------------------------------------------------+
 # | Footer content                                                           |
