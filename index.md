@@ -19,4 +19,4 @@ If you'd like to support me and future projects:
 
 Star my repo, if you like what you see :)
 
-<a href="https://www.paypal.com/donate/?hosted_button_id=CQ8QP9QQ3JU9Y" target="_blank"><img src="https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png" alt="Paypal Donate"></a>
+<a href="https://www.paypal.com/donate/?hosted_button_id=CQ8QP9QQ3JU9Y" target="_blank"><img src="https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png" alt="Paypal Donate" style="width: 25% !important;></a>
