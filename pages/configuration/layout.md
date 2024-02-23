@@ -5,7 +5,7 @@ nav_order: 4
 parent: Configuration
 ---
 
-# Configuration
+# Layout Configuration
 
 Add the following config to a card
 
