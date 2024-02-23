@@ -28,8 +28,6 @@ Copy this to your lovelace in raw config editor:
 
 {% highlight ruby %}
 
-{% raw %}
-```yaml
 decluttering_templates:
   status_card:
     default:
@@ -1782,9 +1780,6 @@ decluttering_templates:
                 entity: '[[climate]]'
                 attribute: hvac_action
                 value: 'off'
-
-```
-{% endraw %}
 
 {% endhighlight %}
 
