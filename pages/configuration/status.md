@@ -31,6 +31,7 @@ Currently supported entity domains:
 ## Status Card Configuration
 
 Default Variables:
+
       - area_filter_type: reject
       - light_filter_type: reject
       - switch_filter_type: reject
