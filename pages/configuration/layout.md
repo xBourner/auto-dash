@@ -25,7 +25,7 @@ which comes from the code:
     "footer footer footer"
 ```
 
-A Dot (.) means the frid is empty. Repeat the name of the grid to fill the columns.
+A dot (.) means the grid column is empty. Repeat the name of the grid to fill the columns.
 You can add/remove the colums. Change the code to this:
 
 ```
