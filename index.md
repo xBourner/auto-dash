@@ -8,15 +8,22 @@ nav_order: 1
 
 [View on Github](https://github.com/xBourner/auto-dash){: .btn .btn-blue }
 
+I tried to built a dashboard which is auto generated without the use of javascript.
+The only thing which are needed are custom cards. Take a further look into config to see whats needed.
+
+- responsive (mobile, tablet, desktop)
+- auto generated and sorted by areas and domains
+
 
 Here is the latest screenshot of the progress.
+
+![image](https://github.com/xBourner/auto-dash/assets/64064679/ebfd9222-07fc-43db-bff6-0101f1661871)
+
 
 ## Credit
 
 - inspired by the great work of [Dwain Sheeren](https://github.com/dwainscheeren/dwains-lovelace-dashboard)
 
-If you'd like to support me and future projects:
 
-Star my repo, if you like what you see :)
 
 <a href="https://www.paypal.com/donate/?hosted_button_id=CQ8QP9QQ3JU9Y" target="_blank"><img src="https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png" alt="Paypal Donate" style="width: 25% !important;"></a>
