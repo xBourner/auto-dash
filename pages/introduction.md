@@ -23,6 +23,13 @@ These are:
 
 Copy this to your lovelace in raw config editor:
 
+<details>
+
+<summary>Code</summary>
+
+### You can add a header
+
+
 ```
 decluttering_templates:
   status_card:
@@ -1777,6 +1784,8 @@ decluttering_templates:
                 attribute: hvac_action
                 value: 'off'
 ```
+
+</details>
 
 In conclusion, each card will potentially need the following file and folder in order to work properly:
 * One folder in HomeOS_Module (i.e: weather folder) this is the definition of the card
