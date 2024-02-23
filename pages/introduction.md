@@ -27,7 +27,7 @@ Copy this to your lovelace in raw config editor:
 <summary>Preview</summary>
 
 {% highlight ruby %}
-
+{% raw %}
 decluttering_templates:
   status_card:
     default:
@@ -1780,7 +1780,7 @@ decluttering_templates:
                 entity: '[[climate]]'
                 attribute: hvac_action
                 value: 'off'
-
+{% endraw %}
 {% endhighlight %}
 
 </details>
