@@ -19,6 +19,9 @@ Here is the latest screenshot of the progress.
 
 ![image](https://github.com/xBourner/auto-dash/assets/64064679/ebfd9222-07fc-43db-bff6-0101f1661871)
 
+![image](https://github.com/xBourner/auto-dash/assets/64064679/dbc8c671-1e97-40b7-88b0-03c208216367)
+
+
 
 ## Credit
 
