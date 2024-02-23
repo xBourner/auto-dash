@@ -7,6 +7,8 @@ parent: Configuration
 
 # Rooms Configuration
 
+
+
 This shows:
 - all entities assigned to your area
 - grouped by entity
@@ -16,6 +18,7 @@ This shows:
 ## Rooms Configuration
 
 Add a new room page with these settings:
+
 ![image](https://github.com/xBourner/auto-dash/assets/64064679/27e410b3-1842-45cd-8f08-77a0a513f55d)
 
 Use Grid layout from layout card.
