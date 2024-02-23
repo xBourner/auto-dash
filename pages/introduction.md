@@ -17,6 +17,7 @@ These are:
  - custom:auto-entities
  - custom:layout-card
  - custom:decluttering-template-card
+ - custom:room-card
 
 
 ## Configuration
