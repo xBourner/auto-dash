@@ -21,9 +21,8 @@ These are:
 
 ## Configuration
 
-> this is an example for the weather card integration
+Copy this to your lovelace in raw config editor:
 
-	.
 	decluttering_templates:
 	status_card:
 		default:
