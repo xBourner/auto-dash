@@ -16,4 +16,4 @@ Things i want to add:
 - add conditional cards for binary sensors to only show on state (like only showing open windows in room view and hiding them when they are closed)
 - add support for more views/tabs to be responsive
 
-Feel free to open an issue or a feature request.
+Feel free to open an issue or a feature request [here](https://github.com/xBourner/auto-dash/issues)
