@@ -13,9 +13,9 @@ aux_links_new_tab: true
   
 color_scheme: dark
 
-favicon_ico: "/auto-dash.png"
+favicon_ico: "/auto-dash-small.png"
 
-logo: "/auto-dash.png"
+logo: "/auto-dash-small.png"
 
 
 # +--------------------------------------------------------------------------+
