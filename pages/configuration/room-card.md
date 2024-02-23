@@ -14,7 +14,8 @@ The room card shows:
 - shows when climate is on
 - will open a new tab of your room when path variable is set
 
-![image](https://github.com/xBourner/auto-dash/assets/64064679/ae9774e5-28a4-45c2-9fc8-c6be0500d7c3)
+![image](https://github.com/xBourner/auto-dash/assets/64064679/16bdfba7-7391-435b-80c4-43444bf1385a)
+
 
 
 ## Room Card Configuration
