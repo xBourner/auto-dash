@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Future
 layout: home
 nav_order: 9
 ---
