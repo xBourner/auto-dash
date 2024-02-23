@@ -1784,34 +1784,3 @@ decluttering_templates:
 {% endhighlight %}
 
 </details>
-
-
-
-
-
-
-In conclusion, each card will potentially need the following file and folder in order to work properly:
-* One folder in HomeOS_Module (i.e: weather folder) this is the definition of the card
-* One folder in www for all the picture, icon used by the card (i.e weather_media)
-* One file in package for the edition of the entity and value template (i.e weather_package.yaml)
-* One file in themes/HomeOS/light for the light theme version of the card
-* One file in themes/HomeOS/dark for the dark theme version of the card
-
-
-
-# Naming convention
-
-By default, everything will be in lower case.
-
-### File convention
-
-`name_type_sub-type.extension`
-
-example: weather_card.yaml
-
-
-### theme variable convention
-
-`homeos-type-definition:`
-
-example: homeos-topbar-height:
