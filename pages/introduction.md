@@ -27,7 +27,7 @@ Copy this to your lovelace in raw config editor:
 
 <summary>Code</summary>
 
-### You can add a header
+### Decluttering Card Templates
 
 
 ```
