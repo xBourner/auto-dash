@@ -32,7 +32,7 @@ Copy this to your lovelace in raw config editor:
 
 {% raw %}
 
-```
+```yaml
 decluttering_templates:
   status_card:
     default:
