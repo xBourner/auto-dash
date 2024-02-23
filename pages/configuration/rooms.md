@@ -11,7 +11,7 @@ parent: Configuration
 
 This shows:
 - all entities assigned to your area
-- grouped by entity
+- grouped by entity domain
 
 ![image](https://github.com/xBourner/auto-dash/assets/64064679/fef2027e-fa38-4f76-9775-a0032aeac672)
 
