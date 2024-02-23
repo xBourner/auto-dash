@@ -21,7 +21,7 @@ These are:
 
 ## Configuration
 
-Copy this to your lovelace in raw config editor:
+Copy this to your lovelace in raw config editor: 
 
 <details>
 
