@@ -4,7 +4,7 @@ layout: home
 nav_order: 1
 ---
 
-# Welcome to AutoDash documentation. 
+# Welcome to Auto Dash documentation. 
 
 [View on Github](https://github.com/xBourner/auto-dash){: .btn .btn-blue }
 <a href="https://www.paypal.com/donate/?hosted_button_id=CQ8QP9QQ3JU9Y" target="_blank"><img src="https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png" alt="Paypal Donate" style="width: 25% !important; margin-bottom: -18px !important;"></a>
@@ -12,8 +12,12 @@ nav_order: 1
 I tried to built a dashboard which is auto generated without the use of javascript.
 The only thing which are needed are custom cards. Take a further look into config to see whats needed.
 
+Auto Dash is
+
 - responsive (mobile, tablet, desktop)
 - auto generated and sorted by areas and domains
+- userfriendly to implement
+- easily to customize (just yaml)
 
 
 Here is the latest screenshot of the progress.
