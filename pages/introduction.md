@@ -11,18 +11,22 @@ nav_order: 2
 You need some custom cards to have the same results like shown in the screenshots. 
 
 These are:
- - custom:swipe-card
- - custom:mod-card
- - custom:mushroom-cards
- - custom:auto-entities
- - custom:layout-card
- - custom:decluttering-template-card
- - custom:room-card
+
+- [Swipe Card](https://github.com/bramkragten/swipe-card)
+- [Card Mod](https://github.com/thomasloven/lovelace-card-mod)
+- [Mushroom Cards](https://github.com/piitaya/lovelace-mushroom)
+- [Auto Entities](https://github.com/thomasloven/lovelace-auto-entities)
+- [Layout Card](https://github.com/thomasloven/lovelace-layout-card)
+- [Decluttering Card](https://github.com/custom-cards/decluttering-card)
+- [Room Card](https://github.com/marcokreeft87/room-card)
 
 
 ## Configuration
 
-Copy this to your lovelace in raw config editor: 
+Copy this templates to your lovelace to the top in raw config editor: 
+
+![image](https://github.com/xBourner/auto-dash/assets/64064679/0056a1c6-f044-44c7-a16f-4aba48755fdf)
+
 
 <details>
 <summary>Preview</summary>
