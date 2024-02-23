@@ -16,11 +16,13 @@ Currently supported entity domains:
 - light
 - swtich
 - media_player
+- climate
 - window
 - door
 - motion
 - lock
 - vacuum
+- fan
 
 ![image](https://github.com/xBourner/auto-dash/assets/64064679/8d5d9184-b8e7-442b-9185-d56f5c7e4750)
 
