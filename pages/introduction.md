@@ -23,6 +23,11 @@ These are:
 
 Copy this to your lovelace in raw config editor: 
 
+<details>
+<summary>Preview</summary>
+
+{% highlight ruby %}
+
 {% raw %}
 ```yaml
 decluttering_templates:
@@ -1780,6 +1785,12 @@ decluttering_templates:
 
 ```
 {% endraw %}
+
+{% endhighlight %}
+
+</details>
+
+
 
 
 
