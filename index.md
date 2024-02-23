@@ -13,7 +13,7 @@ Here is the latest screenshot of the progress.
 
 ## Credit
 
-- inspired by the great work of [Dwain Sheeren][https://github.com/dwainscheeren/dwains-lovelace-dashboard]
+- inspired by the great work of [Dwain Sheeren](https://github.com/dwainscheeren/dwains-lovelace-dashboard)
 
 If you'd like to support me and future projects:
 
