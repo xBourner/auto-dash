@@ -13,9 +13,6 @@ aux_links_new_tab: true
   
 color_scheme: dark
 
-favicon_ico: "/assets/images/HomeOS-Icon-white.ico"
-
-logo: "/assets/images/HomeOS-1.png"
 
 # +--------------------------------------------------------------------------+
 # | Footer content                                                           |
