@@ -20,6 +20,7 @@ which comes from the code:
     "header . ."
     "status . ."
     "favorit . ."
+    "floor1 floor2 floor3"
     "room1 room2 room3"
     "room4 room5 room6"  
     "footer footer footer"
@@ -34,6 +35,9 @@ You can add/remove the colums. Change the code to this:
     "header . "
     "status . "
     "favorit . "
+    "floor1 floor1"
+    "floor2 floor2"
+    "floor3 floor3"
     "room1 room2"
     "room3 room4"  
     "footer footer"
@@ -52,6 +56,7 @@ layout:
     "header . ."
     "status . ."
     "favorit . ."
+    "floor1 floor2 floor3"
     "room1 room2 room3"
     "room4 room5 room6"  
     "footer footer footer" 
@@ -62,6 +67,9 @@ layout:
         "header header"
         "status status"
         "favorit favorit"
+        "floor1 floor1"
+        "floor2 floor2"
+        "floor3 floor3"
         "room1 room2" 
         "room3 room4" 
         "room5 room5" 
@@ -71,6 +79,9 @@ layout:
         "header header" 
         "status status"
         "favorit favorit"
+        "floor1 floor1"
+        "floor2 floor2"
+        "floor3 floor3"
         "room1 room2" 
         "room3 room4" 
         "room5 room6"
@@ -80,6 +91,9 @@ layout:
         "header header ." 
         "status status ."
         "favorit favorit ."
+        "floor1 floor1 ."
+        "floor2 floor2 ."
+        "floor3 floor3 ."
         "room1 room2 room3" 
         "room4 room5 room6"
 cards:
@@ -88,6 +102,26 @@ cards:
       grid-area: header
     template: header_card
 
+```
+
+If you want to add some floors because you have to many rooms yu can add a simple card with navigation.
+Add a subview for you floor and add it to a card like this:
+
+Name it like you want. Required is to add this to the right place.
+```yaml
+    view_layout:
+      grid-area: floor1
+```
+
+```yaml
+  - type: custom:mushroom-template-card
+    view_layout:
+      grid-area: floor1
+    primary: Floor 1
+    icon: mdi:numeric-1
+    tap_action:
+      action: navigate
+      navigation_path: /auto-dash/floor1
 ```
 
 You can add your own cards or more decluttering cards with templates.
