@@ -104,14 +104,9 @@ cards:
 
 ```
 
-If you want to add some floors because you have to many rooms yu can add a simple card with navigation.
-Add a subview for you floor and add it to a card like this:
+If you want to add some floors because you have to many rooms you can add a simple card with navigation action.
+Add a subview for the desired floor. Add a navigation action like shown in code:
 
-Name it like you want. Required is to add this to the right place.
-```yaml
-    view_layout:
-      grid-area: floor1
-```
 
 ```yaml
   - type: custom:mushroom-template-card
@@ -122,6 +117,14 @@ Name it like you want. Required is to add this to the right place.
     tap_action:
       action: navigate
       navigation_path: /auto-dash/floor1
+```
+
+Name it like you want. The only required thing is to use the correct grid area naming. 
+Add floor1, floor2 or floor3 to the area to show the card at the correct place.
+
+```yaml
+    view_layout:
+      grid-area: floor1
 ```
 
 You can add your own cards or more decluttering cards with templates.
