@@ -189,6 +189,8 @@ Add this template to your raw config editor (in the decluttering template sectio
 {% endraw %}
 {% endhighlight %}
 
+</details>
+
 Then add two condtional cards based on screen size.
 The all_in_one template should be used on desktop and the deafult room-card should be used on mobile.
 
