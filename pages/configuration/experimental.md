@@ -17,6 +17,7 @@ Its based on many conditional cards with media query.
 
 Add a input select helper to toggle around the rooms. Add all the room names to that input select.
 Name it input_select.room_select to have the script running. Names of your rooms must be the same like in the input select.
+
 ![image](https://github.com/xBourner/auto-dash/assets/64064679/80de82bc-c672-4ca9-9081-2846f80ac12c)
 
 Add this template to your raw config editor (in the decluttering template section)
