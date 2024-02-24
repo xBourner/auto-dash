@@ -21,6 +21,15 @@ These are:
 - [Room Card](https://github.com/marcokreeft87/room-card)
 
 
+## Installation
+
+Go to Settings -> Dashboards and add a new one.
+Take a name and icon you want.
+The URL has to be set to "auto-dash".
+
+![image](https://github.com/xBourner/auto-dash/assets/64064679/87b16e9f-01eb-4be9-96db-fef0d2062e9c)
+
+
 ## Configuration
 
 Copy this templates to your lovelace to the top in raw config editor: 
