@@ -20,7 +20,11 @@ Add a input select helper to toggle around the rooms. Add all the room names to 
 
 Add this template to your raw config editor (in the decluttering template section)
 
-```yaml
+<details>
+<summary>Preview</summary>
+
+{% highlight ruby %}
+{% raw %}
   room_card_all_in_one:
     default:
       - climate: climate.study
@@ -182,7 +186,8 @@ Add this template to your raw config editor (in the decluttering template sectio
                 entity: '[[climate]]'
                 attribute: hvac_action
                 value: 'off'
-```
+{% endraw %}
+{% endhighlight %}
 
 Then add two condtional cards based on screen size.
 The all_in_one template should be used on desktop and the deafult room-card should be used on mobile.
