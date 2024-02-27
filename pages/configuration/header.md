@@ -17,7 +17,12 @@ The Header card shows:
 
 ## Header Configuration
 
-Default Variables:
+### Available Variables:
+| Variable | Option | Requirement | Default | Description |
+| weather | entity | required | weather.openweathermap | Define your Weather Entity |
+
+
+### Default Variables:
 
       - weather: weather.openweathermap
       - greeting: Hello
