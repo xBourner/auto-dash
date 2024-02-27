@@ -25,14 +25,15 @@ These are:
 
 Go to Settings -> Dashboards and add a new one.
 Take a name and icon you want.
-The URL has to be set to "auto-dash".
+**The URL has to be set to "auto-dash".** 
+Otherwise subviews will not work correctly.
 
 ![image](https://github.com/xBourner/auto-dash/assets/64064679/87b16e9f-01eb-4be9-96db-fef0d2062e9c)
 
 
 ## Configuration
 
-Copy this templates to your lovelace to the top in raw config editor: 
+Copy this templates to your lovelace to the very top in raw config editor: (leave all content below the "view:" tag)
 
 ![image](https://github.com/xBourner/auto-dash/assets/64064679/0056a1c6-f044-44c7-a16f-4aba48755fdf)
 
