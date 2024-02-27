@@ -18,6 +18,7 @@ The Header card shows:
 ## Header Configuration
 
 ### Available Variables:
+
 | Variable | Option | Requirement | Default | Description |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | weather | entity | required | weather.openweathermap | Define your Weather Entity |
