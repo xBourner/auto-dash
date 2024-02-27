@@ -21,7 +21,20 @@ The Header card shows:
 
 | Variable | Option | Requirement | Default | Description |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| weather | entity | required | weather.openweathermap | Define your Weather Entity |
+| weather | entity | optional | weather.openweathermap | Define your Weather Entity |
+| greeting| string | optional | Hello | Define your default Greeting |
+| greeting_morning | string | optional | Good Morning | Define your Greeting for the morning |
+| greeting_afternoon | string | optional | Good Afternoon | Define your Greeting for the afternoon |
+| greeting_evening | string | optional | Good Evening | Define your Greeting for the evening |
+| greeting_night | string | optional | Good Night | Define your Greeting for the night |
+| monday | string | optional | Monday | Define the wording for "Monday" in your language |
+| tuesday | string | optional | Tuesday | Define the wording for "Tuesday" in your language |
+| wedenesday | string | optional | Wednesday | Define the wording for "Wednesday" in your language |
+| thursday | string | optional | Thursday | Define the wording for "Thursday" in your language |
+| friday | string | optional | Friday | Define the wording for "Friday" in your language |
+| saturday | string | optional | Saturday | Define the wording for "Saturday" in your language |
+| sunday | string | optional | Sunday | Define the wording for "Sunday" in your language |
+
 
 
 ### Default Variables:
@@ -40,11 +53,18 @@ The Header card shows:
       - saturday: Saturday
       - sunday: Sunday
 
-You can change the variables to the one you want. 
-
-For example:
+Add a default card with the code:
 
 ```yaml
+type: custom:decluttering-card
+view_layout:
+  grid-area: header
+template: header_card
+```
+You can change the variables to the one you want. 
+For example:
+
+yaml
 type: custom:decluttering-card
 view_layout:
   grid-area: header
