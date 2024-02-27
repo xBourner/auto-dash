@@ -19,6 +19,8 @@ Auto Dash is
 - userfriendly to implement
 - easily to customize (just yaml)
 
+Please read all config/installation pages carefully. Start from introduction and keep going throught all pages in configuration folder.
+
 
 Here is the latest screenshot of the progress.
 
