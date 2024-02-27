@@ -42,6 +42,7 @@ You can add/remove the colums. Change the code to this:
     "room3 room4"  
     "footer footer"
 ```
+##Configuration
 
 Add the following config to a card
 
