@@ -61,10 +61,11 @@ view_layout:
   grid-area: header
 template: header_card
 ```
+
 You can change the variables to the one you want. 
 For example:
 
-yaml
+```yaml
 type: custom:decluttering-card
 view_layout:
   grid-area: header
