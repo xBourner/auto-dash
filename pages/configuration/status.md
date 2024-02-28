@@ -30,6 +30,34 @@ Currently supported entity domains:
 
 ## Status Card Configuration
 
+Variables:
+
+[[person1]
+[[person2]
+[[filter]
+[[area_filter]
+[[light_filter_type]
+[[area_filter_type]
+[[light_title]
+[[switch_filter_type]
+[[switch_title]
+[[media_player_filter_type]
+[[media_player_title]
+[[motion_filter_type]
+[[motion_title]
+[[window_filter_type]
+[[window_title]
+[[door_filter_type]
+[[door_title]
+[[climate_filter_type]
+[[climate_title]
+[[lock_filter_type]
+[[lock_title]
+[[vacuum_filter_type]
+[[vacuum_title]
+[[fan_filter_type]
+[[fan_title]
+
 Default Variables:
 
       - area_filter_type: reject
