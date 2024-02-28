@@ -33,7 +33,27 @@ You have to add a dummy climate integration if not all of your rooms have a clim
     target_sensor: sensor.study_temperature
 ```
 
+Variables:
+
+[[path]
+[[light]
+[[icon]
+[[switch]
+[[motion]
+[[vacuum]
+[[media]
+[[media_group]
+[[door]
+[[lock]
+[[window]
+[[room]
+[[temperature]
+[[humidity]
+[[climate]
+
+
 Default Variables:
+
 
       - climate: climate.study
 
