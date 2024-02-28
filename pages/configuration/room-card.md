@@ -35,21 +35,23 @@ You have to add a dummy climate integration if not all of your rooms have a clim
 
 Variables:
 
-[[path]
-[[light]
-[[icon]
-[[switch]
-[[motion]
-[[vacuum]
-[[media]
-[[media_group]
-[[door]
-[[lock]
-[[window]
-[[room]
-[[temperature]
-[[humidity]
-[[climate]
+| Variable | Option | Requirement | Default | Description |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| room | string | required | none | Define the ename of your room |
+| path | string | optional | none | Define the path to your room subview |
+| icon | icon | optional | none | Define the icon of the room |
+| climate | entity | required | climate.study | Define the climate entity |
+| light | entity | optional | none | Define the light entity |
+| switch | entity | optional | none | Define the switch entity |
+| motion | entity | optional | none | Define the motion entity |
+| vacuum | entity | optional | none | Define the vacuum entity |
+| media | entity | optional | none | Define the media entity |
+| media_group | entity | optional | none | Define the media_group entity |
+| door | entity | optional | none | Define the door entity |
+| lock | entity  | optional | none | Define the lock entity |
+| window | entity | optional | none | Define the window entity |
+| temperature | entity | optional | none | Define the temperature entity |
+| humidity | entity | optional | none | Define the humidity entity |
 
 
 Default Variables:
