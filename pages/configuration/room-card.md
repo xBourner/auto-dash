@@ -37,7 +37,7 @@ Variables:
 
 | Variable | Option | Requirement | Default | Description |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| room | string | required | none | Define the ename of your room |
+| room | string | required | none | Define the name of your room |
 | path | string | optional | none | Define the path to your room subview |
 | icon | icon | optional | none | Define the icon of the room |
 | climate | entity | required | climate.study | Define the climate entity |
