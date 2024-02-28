@@ -26,6 +26,32 @@ Choose Subview if you want to hide it from top bar.
 
 Also specify the path to the same path in the room card.
 
+Variables:
+
+[[light_title]
+[[filter]
+[[area]
+[[light_filter_type]
+[[media_title]
+[[media_filter_type]
+[[climate_title]
+[[climate_filter_type]
+[[switch_title]
+[[switch_filter_type]
+[[sensor_title]
+[[sensor_filter_type]
+[[fan_title]
+[[fan_filter_type]
+[[select_title]
+[[select_filter_type]
+[[boolean_title]
+[[boolean_filter_type]
+[[binary_title]
+[[binary_filter_type]
+[[vacuum_title]
+[[vacuum_filter_type]
+
+
 Default Variables:
 
       - light_filter_type: reject
