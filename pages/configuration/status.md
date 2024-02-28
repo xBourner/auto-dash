@@ -32,31 +32,42 @@ Currently supported entity domains:
 
 Variables:
 
-[[person1]
-[[person2]
-[[filter]
-[[area_filter]
-[[light_filter_type]
-[[area_filter_type]
-[[light_title]
-[[switch_filter_type]
-[[switch_title]
-[[media_player_filter_type]
-[[media_player_title]
-[[motion_filter_type]
-[[motion_title]
-[[window_filter_type]
-[[window_title]
-[[door_filter_type]
-[[door_title]
-[[climate_filter_type]
-[[climate_title]
-[[lock_filter_type]
-[[lock_title]
-[[vacuum_filter_type]
-[[vacuum_title]
-[[fan_filter_type]
-[[fan_title]
+| Variable | Option | Requirement | Default | Description |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| person1 | string | required | none | Define the name of person1 |
+| person2 | string | required | none | Define the name of person2 |
+| area_filter | string | optional | none | Define the areas you want to include/exclude |
+| area_filter_type | select/reject | optional | reject | Define the area of all assigned entities |
+| filter | string | optional | none | Define the entities you want to include/exclude |
+| light_title | string | optional | Lights | Define the title for light entities |
+| light_filter_type | select/reject | optional | reject | Define the filter type for light entities |
+| media_title | string | optional | Media | Define the title for media entities |
+| media_filter_type | select/reject | optional | reject | Define the filter type for media entities |
+| climate_title | string | optional | Climate | Define the title for climate entities |
+| climate_filter_type | select/reject | optional | reject | Define the filter type for climate entities |
+| switch_title | string | optional | Switch | Define the title for switch entities |
+| switch_filter_type | select/reject | optional | reject | Define the filter type for switch entities |
+| sensor_title | string | optional | Sensor | Define the title for sensor entities |
+| sensor_filter_type | select/reject  | optional | reject | Define the filter type for sensor entities |
+| fan_title | string | optional | Fan | Define the title for fan entities |
+| fan_filter_type | select/reject | optional | reject | Define the filter type for fan entities |
+| select_title | string | optional | Select | Define the title for select entities |
+| select_filter_type | select/reject | optional | reject | Define the filter type for select entities |
+| boolean_title | string | optional | Input Boolean | Define the title for input_boolean entities |
+| boolean_filter_type | select/reject | optional | reject | Define the filter type for input_boolean entities |
+| binary_title | string | optional | Binary Sensor | Define the title for binary_sensor entities |
+| binary_filter_type | select/reject| optional | reject | Define the filter type for binary_sensor entities |
+| vacuum_title | string| optional | Vacuum | Define the title for vacuum entities |
+| vacuum_filter_type | select/reject| optional | reject | Define the filter type for vacuum entities |
+| motion_title | string | optional | Lights | Define the title for motion entities |
+| motion_filter_type | select/reject | optional | reject | Define the filter type for motion entities |
+| window_title | string | optional | Lights | Define the title for window entities |
+| window_filter_type | select/reject | optional | reject | Define the filter type for window entities |
+| door_title | string | optional | Lights | Define the title for door entities |
+| door_filter_type | select/reject | optional | reject | Define the filter type for door entities |
+| lock_title | string | optional | Lights | Define the title for lock entities |
+| lock_filter_type | select/reject | optional | reject | Define the filter type for lock entities |
+
 
 Default Variables:
 
