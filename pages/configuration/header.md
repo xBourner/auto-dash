@@ -17,6 +17,10 @@ The Header card shows:
 
 ## Header Configuration
 
+The Header Card comes automatically with the default template. This is the easiest way to setup.
+<br> <br> 
+You can delete the header card if you want to. Just delete the code further down.
+
 ### Available Variables:
 
 | Variable | Option | Requirement | Default | Description |
@@ -35,23 +39,6 @@ The Header card shows:
 | saturday | string | optional | Saturday | Define the wording for "Saturday" in your language |
 | sunday | string | optional | Sunday | Define the wording for "Sunday" in your language |
 
-
-
-### Default Variables:
-
-      - weather: weather.openweathermap
-      - greeting: Hello
-      - greeting_morning: Good Morning
-      - greeting_afternoon: Good Afternoon
-      - greeting_evening: Good Evening
-      - greeting_night: Good Night
-      - monday: Monday
-      - tuesday: Tuesday
-      - wednesday: Wednesday
-      - thursday: Thursday
-      - friday: Friday
-      - saturday: Saturday
-      - sunday: Sunday
 
 Add a default card with the code:
 
