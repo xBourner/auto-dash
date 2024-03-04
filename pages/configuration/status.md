@@ -24,7 +24,7 @@ Currently supported entity domains:
 - vacuum
 - fan
 
-![image](https://github.com/xBourner/auto-dash/assets/64064679/8d5d9184-b8e7-442b-9185-d56f5c7e4750)
+![image](https://github.com/xBourner/auto-dash/assets/64064679/ab276371-91f4-421f-9031-6ba2fb480282)
 
 ![image](https://github.com/xBourner/auto-dash/assets/64064679/d8cc4bde-8238-43e0-b836-5878d886c318)
 
