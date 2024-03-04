@@ -44,59 +44,9 @@ You can add/remove the colums. Change the code to this:
 ```
 ## Configuration
 
-Add the following config to a card
+Add the following config to your existing card. (at the the very bottom)
 
 ```yaml
-title: Grid layout
-type: custom:layout-card
-layout_type: custom:grid-layout
-layout:
-  grid-template-columns: repeat(3, minmax(0px, 1fr))
-  grid-template-rows: auto
-  grid-template-areas: |
-    "header . ."
-    "status . ."
-    "favorit . ."
-    "floor1 floor2 floor3"
-    "room1 room2 room3"
-    "room4 room5 room6"  
-    "footer footer footer" 
-  mediaquery:
-    '(max-width: 600px)':
-      grid-template-columns: repeat(2, minmax(0px, 1fr))
-      grid-template-areas: |
-        "header header"
-        "status status"
-        "favorit favorit"
-        "floor1 floor1"
-        "floor2 floor2"
-        "floor3 floor3"
-        "room1 room2" 
-        "room3 room4" 
-        "room5 room5" 
-    '(max-width: 1000px)':
-      grid-template-columns: repeat(2, minmax(0px, 1fr))
-      grid-template-areas: |
-        "header header" 
-        "status status"
-        "favorit favorit"
-        "floor1 floor1"
-        "floor2 floor2"
-        "floor3 floor3"
-        "room1 room2" 
-        "room3 room4" 
-        "room5 room6"
-    '(max-width: 1200px)':
-      grid-template-columns: repeat(3, minmax(0px, 1fr))
-      grid-template-areas: |
-        "header header ." 
-        "status status ."
-        "favorit favorit ."
-        "floor1 floor1 ."
-        "floor2 floor2 ."
-        "floor3 floor3 ."
-        "room1 room2 room3" 
-        "room4 room5 room6"
 cards:
   - type: custom:decluttering-card
     view_layout:
