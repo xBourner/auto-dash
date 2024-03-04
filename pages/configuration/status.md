@@ -30,7 +30,7 @@ Currently supported entity domains:
 
 ## Status Card Configuration
 
-Variables:
+###Variables:
 
 | Variable | Option | Requirement | Default | Description |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -67,30 +67,19 @@ Variables:
 | door_filter_type | select/reject | optional | reject | Define the filter type for door entities |
 | lock_title | string | optional | Lights | Define the title for lock entities |
 | lock_filter_type | select/reject | optional | reject | Define the filter type for lock entities |
+| light_card_type | card type | optional | custom:mushroom-light-card | Define the card type for light entities |
+| media_player_card_type | card type | optional | custom:mushroom-media-player-card | Define the card type for media player entities |
+| climate_card_type | card type | optional | custom:mushroom-climate-card | Define the card type for climate entities |
+| switch_card_type | card type | optional | custom:mushroom-entity-card | Define the card type for switch entities |
+| motion_card_type | card type | optional | custom:mushroom-entity-card | Define the card type for motion entities |
+| window_card_type | card type | optional | custom:mushroom-entity-card | Define the card type for window entities |
+| door_card_type | card type | optional | custom:mushroom-entity-card | Define the card type for door entities |
+| lock_card_type | card type | optional | custom:mushroom-lock-card | Define the card type for lock entities |
+| vacuum_card_type | card type | optional | custom:mushroom-vacuum-card | Define the card type for vacuum entities |
+| fan_card_type | card type | optional | custom:mushroom-fan-card | Define the card type for fan entities |
+| state_on | string | optional | 'on' |  Define the wording for 'on' in your language |
+| state_open | string | optional | open | Define the wording for 'open' in your language |
 
-
-Default Variables:
-
-      - area_filter_type: reject
-      - light_filter_type: reject
-      - switch_filter_type: reject
-      - media_player_filter_type: reject
-      - motion_filter_type: reject
-      - door_filter_type: reject
-      - climate_filter_type: reject
-      - lock_filter_type: reject
-      - vacuum_filter_type: reject
-      - fan_filter_type: reject
-      - light_title: Lights
-      - media_player_title: Media
-      - climate_title: Climate
-      - switch_title: Switch
-      - motion_title: Motion
-      - window_title: Window
-      - door_title: Door
-      - lock_title: Lock
-      - vacuum_title: Vacuum
-      - fan_title: Fan
 
 You can change the variables to the one you want. 
 
