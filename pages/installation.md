@@ -12,8 +12,7 @@ Take a name and icon you want. <br>
 **The URL has to be set to "auto-dash".** 
 Otherwise subviews will not work correctly.
 
-![image](https://github.com/xBourner/auto-dash/assets/64064679/87b16e9f-01eb-4be9-96db-fef0d2062e9c)
-
+![image](https://github.com/xBourner/auto-dash/assets/64064679/031eb56b-2d5f-40ef-95b2-98da53749e8c)
 
 Copy and replace all content with this templates in raw config editor:
 
