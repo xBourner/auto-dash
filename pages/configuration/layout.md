@@ -7,8 +7,11 @@ parent: Configuration
 
 # Layout Configuration
 
-This dashboard is based on the layout-card.
-I personally like the use of grids because you can make the dashboard responsive.
+This dashboard is based on the layout-card. <br>
+You can easilly put cards into columns which will behave different on mobile, tablet or desktop.
+<br> <br>
+
+You dont'have to explicitly add some code here. This site is more like an explanation.
 
 Here is the grid layout:
 ![image](https://github.com/xBourner/auto-dash/assets/64064679/02174034-e860-49e9-abf7-5c33b973f766)
@@ -44,22 +47,12 @@ You can add/remove the colums. Change the code to this:
 ```
 ## Configuration
 
-Add the following config to your existing card. (at the the very bottom)
-
-```yaml
-cards:
-  - type: custom:decluttering-card
-    view_layout:
-      grid-area: header
-    template: header_card
-
-```
-
 If you want to add some floors because you have to many rooms you can add a simple card with navigation action.
 Add a subview for the desired floor. Add a navigation action like shown in code:
 
 
 ```yaml
+cards:
   - type: custom:mushroom-template-card
     view_layout:
       grid-area: floor1
