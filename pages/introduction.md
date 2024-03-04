@@ -33,7 +33,7 @@ Otherwise subviews will not work correctly.
 
 ## Configuration
 
-Copy this templates to your lovelace to the very top in raw config editor: (leave all content below the "view:" tag)
+Copy and replace all content with this templates in raw config editor:
 
 ![image](https://github.com/xBourner/auto-dash/assets/64064679/0056a1c6-f044-44c7-a16f-4aba48755fdf)
 
