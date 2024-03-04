@@ -26,7 +26,8 @@ Currently supported entity domains:
 
 ![image](https://github.com/xBourner/auto-dash/assets/64064679/8d5d9184-b8e7-442b-9185-d56f5c7e4750)
 
-![image](https://github.com/xBourner/auto-dash/assets/64064679/c00c90fd-009e-4b5b-8f4f-8b287fa26be4)
+![image](https://github.com/xBourner/auto-dash/assets/64064679/d8cc4bde-8238-43e0-b836-5878d886c318)
+
 
 ## Status Card Configuration
 
