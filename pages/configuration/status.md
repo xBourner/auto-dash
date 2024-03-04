@@ -81,8 +81,7 @@ Currently supported entity domains:
 | state_on | string | optional | 'on' |  Define the wording for 'on' in your language |
 | state_open | string | optional | open | Define the wording for 'open' in your language |
 
-
-You can change the variables to the one you want. 
+You can leave most variables at default and change the ones you like to (maybe to change language)
 
 For example:
 
