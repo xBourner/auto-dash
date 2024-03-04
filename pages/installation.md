@@ -7,7 +7,7 @@ nav_order: 3
 ## Installation
 
 Go to Settings -> Dashboards and add a new one.
-Take a name and icon you want.
+Take a name and icon you want. <br>
 **The URL has to be set to "auto-dash".** 
 Otherwise subviews will not work correctly.
 
