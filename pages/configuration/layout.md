@@ -63,6 +63,7 @@ Add a subview for the desired floor. Add a navigation action like shown in code:
 ```
 
 Or by adding via gui editor:
+
 ![image](https://github.com/xBourner/auto-dash/assets/64064679/470aee36-c16b-4800-846c-516128a77c30)
 
 Name it like you want. The only required thing is to use the correct grid area naming. 
