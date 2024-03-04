@@ -1871,3 +1871,8 @@ views:
 {% endhighlight %}
 
 </details>
+
+Now it should look something like this:
+
+![image](https://github.com/xBourner/auto-dash/assets/64064679/c5fddf83-5ad1-4ab4-958f-b18bac6cd4c8)
+
