@@ -1866,6 +1866,11 @@ views:
                 "floor3 floor3 ."
                 "room1 room2 room3" 
                 "room4 room5 room6"
+cards:
+  - type: custom:decluttering-card
+    view_layout:
+      grid-area: header
+    template: header_card        
 {% endraw %}
 {% endhighlight %}
 
@@ -1873,7 +1878,7 @@ views:
 
 Now it should look something like this:
 
-![image](https://github.com/xBourner/auto-dash/assets/64064679/c5fddf83-5ad1-4ab4-958f-b18bac6cd4c8)
+![image](https://github.com/xBourner/auto-dash/assets/64064679/7a5dcdd8-64aa-49e9-92b7-b2a7aae971a0)
 
 Please follow the steps under [Configuration](https://xbourner.github.io/auto-dash/pages/configuration/configuration.html) to see whats next.
 
