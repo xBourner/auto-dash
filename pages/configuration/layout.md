@@ -11,7 +11,7 @@ This dashboard is based on the layout-card. <br>
 You can easilly put cards into columns which will behave different on mobile, tablet or desktop.
 <br> <br>
 
-You dont'have to explicitly add some code here. This site is more like an explanation.
+You dont'have to explicitly add some code here. This site is more like an explanation. If you want to add some floors, look down.
 
 Here is the grid layout:
 ![image](https://github.com/xBourner/auto-dash/assets/64064679/02174034-e860-49e9-abf7-5c33b973f766)
@@ -29,8 +29,8 @@ which comes from the code:
     "footer footer footer"
 ```
 
-A dot (.) means the grid column is empty. Repeat the name of the grid to fill the columns.
-You can add/remove the colums. Change the code to this:
+A dot (.) means the grid column is empty. Repeat the name of the grid to fill the columns.<br> <br>
+You can add/remove the colums. For example change the code to this:
 
 ```
   grid-template-columns: repeat(2, minmax(0px, 1fr))
