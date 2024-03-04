@@ -56,6 +56,7 @@ decluttering_templates:
       - lock_filter_type: reject
       - vacuum_filter_type: reject
       - fan_filter_type: reject
+      - window_filter_type: reject
       - light_title: Lights
       - media_player_title: Media
       - climate_title: Climate
@@ -66,6 +67,18 @@ decluttering_templates:
       - lock_title: Lock
       - vacuum_title: Vacuum
       - fan_title: Fan
+      - light_card_type: custom:mushroom-light-card
+      - media_player_card_type: custom:mushroom-media-player-card
+      - climate_card_type: custom:mushroom-climate-card
+      - switch_card_type: custom:mushroom-entity-card
+      - motion_card_type: custom:mushroom-entity-card
+      - window_card_type: custom:mushroom-entity-card
+      - door_card_type: custom:mushroom-entity-card
+      - lock_card_type: custom:mushroom-lock-card
+      - vacuum_card_type: custom:mushroom-vacuum-card
+      - fan_card_type: custom:mushroom-fan-card
+      - state_on: 'on'
+      - state_open: open
     card:
       type: custom:mod-card
       view_layout:
@@ -155,7 +168,7 @@ decluttering_templates:
                     {% set entities = states.light | selectattr('state','eq', 'on') | selectattr('entity_id', 'in', area_entities(area)) | [[light_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
                     {%- set ns.entities_on = ns.entities_on + entities  | length | int-%}
                   {%- endfor -%}
-                    {{ns.entities_on}} an
+                    {{ns.entities_on}} [[state_on]]
                 icon: mdi:lightbulb
                 layout: vertical
                 tap_action:
@@ -166,16 +179,17 @@ decluttering_templates:
                       title: '[[light_title]]'
                       content:
                         type: custom:mod-card
-                        card_mod:
-                          style:
-                            .: |
-                              ha-card {
-                                --ha-card-border-width: 0;
-                                --ha-card-background: none; } 
                         card:
                           type: custom:auto-entities
                           card:
                             type: entities
+                            card_mod:
+                              style:
+                                .: |
+                                  ha-card
+                                     {
+                                       border-style: hidden !important;
+                                     }
                           filter:
                             template: >-
                               {%- set entity_filter = '[[filter]]' -%} {%- set
@@ -193,7 +207,7 @@ decluttering_templates:
                                 {% set entities = states.light | selectattr('state','eq', 'on') | selectattr('entity_id', 'in', area_entities(area)) | [[light_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
                                 {%- set ns.entities_on = ns.entities_on + entities | map(attribute='entity_id') | list -%}
                                   {%- for entity in entities -%}
-                                       {{{ 'type': 'custom:mushroom-light-card', 
+                                       {{{ 'type': '[[light_card_type]]', 
                                        'entity': entity.entity_id,
                                        'use_light_color': 'true',
                                        'show_brightness_control': 'true',
@@ -241,7 +255,7 @@ decluttering_templates:
                     {% set entities = states.switch | selectattr('state','eq', 'on') | selectattr('entity_id', 'in', area_entities(area)) | [[switch_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
                     {%- set ns.entities_on = ns.entities_on + entities  | length | int-%}
                   {%- endfor -%}
-                    {{ns.entities_on}} an
+                    {{ns.entities_on}} [[state_on]]
                 icon: mdi:power-plug
                 layout: vertical
                 tap_action:
@@ -252,16 +266,17 @@ decluttering_templates:
                       title: '[[switch_title]]'
                       content:
                         type: custom:mod-card
-                        card_mod:
-                          style:
-                            .: |
-                              ha-card {
-                                --ha-card-border-width: 0;
-                                --ha-card-background: none; } 
                         card:
                           type: custom:auto-entities
                           card:
                             type: entities
+                            card_mod:
+                              style:
+                                .: |
+                                  ha-card
+                                     {
+                                       border-style: hidden !important;
+                                     }                            
                           filter:
                             template: >-
                               {%- set entity_filter = '[[filter]]' -%}  {%- set
@@ -279,7 +294,7 @@ decluttering_templates:
                                 {% set entities = states.switch | selectattr('state','eq', 'on') | selectattr('entity_id', 'in', area_entities(area)) | [[switch_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
                                 {%- set ns.entities_on = ns.entities_on + entities | map(attribute='entity_id') | list -%}
                                   {%- for entity in entities -%}
-                                       {{{ 'type': 'custom:mushroom-entity-card', 
+                                       {{{ 'type': '[[switch_card_type]]', 
                                        'entity': entity.entity_id }}},
                                 {%- endfor -%}
                               {%- endfor -%}
@@ -333,7 +348,7 @@ decluttering_templates:
                   entity_filter) | list -%}
                     {%- set ns.entities_on = ns.entities_on + entities  | length | int-%}
                   {%- endfor -%}
-                    {{ns.entities_on}} an
+                    {{ns.entities_on}} [[state_on]]
                 icon: mdi:cast
                 layout: vertical
                 tap_action:
@@ -344,16 +359,17 @@ decluttering_templates:
                       title: '[[media_player_title]]'
                       content:
                         type: custom:mod-card
-                        card_mod:
-                          style:
-                            .: |
-                              ha-card {
-                                --ha-card-border-width: 0;
-                                --ha-card-background: none; } 
                         card:
                           type: custom:auto-entities
                           card:
                             type: entities
+                            card_mod:
+                              style:
+                                .: |
+                                  ha-card
+                                     {
+                                       border-style: hidden !important;
+                                     }                            
                           filter:
                             template: >-
                               {%- set entity_filter = '[[filter]]' -%} {%- set
@@ -373,7 +389,7 @@ decluttering_templates:
                                 '(playing|on)') | selectattr('entity_id', 'in', area_entities(area)) | [[media_player_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
                                 {%- set ns.entities_on = ns.entities_on + entities | map(attribute='entity_id') | list -%}
                                   {%- for entity in entities -%}
-                                       {{{ 'type': 'custom:mushroom-media-player-card', 
+                                       {{{ 'type': '[[media_player_card_type]]', 
                                        'entity': entity.entity_id,
                                        'show_volume_level': 'true',
                                        'use_media_info': 'true',
@@ -441,7 +457,7 @@ decluttering_templates:
                   -%}
                     {%- set ns.entities_on = ns.entities_on + entities  | length | int-%}
                   {%- endfor -%}
-                    {{ns.entities_on}} an
+                    {{ns.entities_on}} [[state_on]]
                 icon: mdi:motion-sensor
                 layout: vertical
                 tap_action:
@@ -452,16 +468,17 @@ decluttering_templates:
                       title: '[[motion_title]]'
                       content:
                         type: custom:mod-card
-                        card_mod:
-                          style:
-                            .: |
-                              ha-card {
-                                --ha-card-border-width: 0;
-                                --ha-card-background: none; } 
                         card:
                           type: custom:auto-entities
                           card:
                             type: entities
+                            card_mod:
+                              style:
+                                .: |
+                                  ha-card
+                                     {
+                                       border-style: hidden !important;
+                                     }                            
                           filter:
                             template: >-
                               {%- set entity_filter = '[[filter]]' -%}  {%- set
@@ -483,7 +500,7 @@ decluttering_templates:
                                 | selectattr('attributes.device_class', 'eq', 'motion')| list -%}
                                 {%- set ns.entities_on = ns.entities_on + entities | map(attribute='entity_id') | list -%}
                                   {%- for entity in entities -%}
-                                       {{{ 'type': 'custom:mushroom-entity-card', 
+                                       {{{ 'type': '[[motion_card_type]]', 
                                        'entity': entity.entity_id }}},
                                 {%- endfor -%}
                               {%- endfor -%}
@@ -536,7 +553,7 @@ decluttering_templates:
                   -%}
                     {%- set ns.entities_on = ns.entities_on + entities  | length | int-%}
                   {%- endfor -%}
-                    {{ns.entities_on}} an
+                    {{ns.entities_on}} [[state_open]]
                 icon: mdi:window-open-variant
                 layout: vertical
                 tap_action:
@@ -547,16 +564,17 @@ decluttering_templates:
                       title: '[[window_title]]'
                       content:
                         type: custom:mod-card
-                        card_mod:
-                          style:
-                            .: |
-                              ha-card {
-                                --ha-card-border-width: 0;
-                                --ha-card-background: none; } 
                         card:
                           type: custom:auto-entities
                           card:
                             type: entities
+                            card_mod:
+                              style:
+                                .: |
+                                  ha-card
+                                     {
+                                       border-style: hidden !important;
+                                     }                            
                           filter:
                             template: >-
                               {%- set entity_filter = '[[filter]]' -%}  {%- set
@@ -578,7 +596,7 @@ decluttering_templates:
                                 | selectattr('attributes.device_class', 'eq', 'window')| list -%}
                                 {%- set ns.entities_on = ns.entities_on + entities | map(attribute='entity_id') | list -%}
                                   {%- for entity in entities -%}
-                                       {{{ 'type': 'custom:mushroom-entity-card', 
+                                       {{{ 'type': '[[window_card_type]]', 
                                        'entity': entity.entity_id }}},
                                 {%- endfor -%}
                               {%- endfor -%}
@@ -630,7 +648,7 @@ decluttering_templates:
                   -%}
                     {%- set ns.entities_on = ns.entities_on + entities  | length | int-%}
                   {%- endfor -%}
-                    {{ns.entities_on}} an
+                    {{ns.entities_on}} [[state_open]]
                 icon: mdi:door-open
                 layout: vertical
                 tap_action:
@@ -641,16 +659,17 @@ decluttering_templates:
                       title: '[[door_title]]'
                       content:
                         type: custom:mod-card
-                        card_mod:
-                          style:
-                            .: |
-                              ha-card {
-                                --ha-card-border-width: 0;
-                                --ha-card-background: none; } 
                         card:
                           type: custom:auto-entities
                           card:
                             type: entities
+                            card_mod:
+                              style:
+                                .: |
+                                  ha-card
+                                     {
+                                       border-style: hidden !important;
+                                     }                            
                           filter:
                             template: >-
                               {%- set entity_filter = '[[filter]]' -%}  {%- set
@@ -672,7 +691,7 @@ decluttering_templates:
                                 | selectattr('attributes.device_class', 'eq', 'door')| list -%}
                                 {%- set ns.entities_on = ns.entities_on + entities | map(attribute='entity_id') | list -%}
                                   {%- for entity in entities -%}
-                                       {{{ 'type': 'custom:mushroom-entity-card', 
+                                       {{{ 'type': '[[door_card_type]]', 
                                        'entity': entity.entity_id }}},
                                 {%- endfor -%}
                               {%- endfor -%}
@@ -682,13 +701,13 @@ decluttering_templates:
                 {%- set entity_filter = '[[filter]]' -%} {%- set area_filter =
                 '[[area_filter]]' -%} {%- set ns = namespace(entities_on = 0)
                 -%} {%- set areas = states.climate
-                |selectattr('attributes.hvac_action', 'eq','heating')
+                 | selectattr('state','eq', 'heat')  | selectattr('attributes.hvac_action', '!=', 'idle')
                  | [[climate_filter_type]]attr('entity_id', 'in',
                 entity_filter) | map(attribute='entity_id') | map('area_name') |
                 unique | reject('none')  | [[area_filter_type]]('in',
                 area_filter)  | list -%} {%- for area in areas  -%}
                   {%- set entity_filter = '[[filter]]' -%}
-                  {% set entities = states.climate |selectattr('attributes.hvac_action', 'eq','heating')
+                  {% set entities = states.climate | selectattr('state','eq', 'heat')  | selectattr('attributes.hvac_action', '!=', 'idle')
                   | selectattr('entity_id', 'in', area_entities(area)) | [[climate_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
                   {%- set ns.entities_on = ns.entities_on + entities  | length | int-%}
                 {%- endfor -%}
@@ -708,17 +727,17 @@ decluttering_templates:
                 secondary: >-
                   {%- set entity_filter = '[[filter]]' -%} {%- set area_filter =
                   '[[area_filter]]' -%} {%- set ns = namespace(entities_on = 0)
-                  -%} {%- set areas = states.climate
-                  |selectattr('attributes.hvac_action', 'eq','heating') |
-                  [[climate_filter_type]]attr('entity_id', 'in', entity_filter)
-                  | map(attribute='entity_id') | map('area_name') | unique |
-                  reject('none')  | [[area_filter_type]]('in', area_filter)  |
-                  list -%} {%- for area in areas  -%}
+                  -%} {%- set areas = states.climate | selectattr('state','eq',
+                  'heat')  | selectattr('attributes.hvac_action', '!=', 'idle')
+                  | [[climate_filter_type]]attr('entity_id', 'in',
+                  entity_filter) | map(attribute='entity_id') | map('area_name')
+                  | unique | reject('none')  | [[area_filter_type]]('in',
+                  area_filter)  | list -%} {%- for area in areas  -%}
                     {%- set entity_filter = '[[filter]]' -%}
-                    {% set entities = states.climate |selectattr('attributes.hvac_action', 'eq','heating') | selectattr('entity_id', 'in', area_entities(area)) | [[climate_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
+                    {% set entities = states.climate | selectattr('state','eq', 'heat')  | selectattr('attributes.hvac_action', '!=', 'idle') | selectattr('entity_id', 'in', area_entities(area)) | [[climate_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
                     {%- set ns.entities_on = ns.entities_on + entities  | length | int-%}
                   {%- endfor -%}
-                    {{ns.entities_on}} an
+                    {{ns.entities_on}} [[state_on]]
                 icon: mdi:thermometer-low
                 layout: vertical
                 tap_action:
@@ -729,24 +748,25 @@ decluttering_templates:
                       title: '[[climate_title]]'
                       content:
                         type: custom:mod-card
-                        card_mod:
-                          style:
-                            .: |
-                              ha-card {
-                                --ha-card-border-width: 0;
-                                --ha-card-background: none; } 
                         card:
                           type: custom:auto-entities
                           card:
                             type: entities
+                            card_mod:
+                              style:
+                                .: |
+                                  ha-card
+                                     {
+                                       border-style: hidden !important;
+                                     }                            
                           filter:
                             template: >-
                               {%- set entity_filter = '[[filter]]' -%}  {%- set
                               area_filter = '[[area_filter]]' -%} {%- set ns =
                               namespace(entities_on = []) -%}     {%- set areas
-                              = states.climate
-                              |selectattr('attributes.hvac_action',
-                              'eq','heating') |
+                              = states.climate | selectattr('state','eq',
+                              'heat')  | selectattr('attributes.hvac_action',
+                              '!=', 'idle')  |
                               [[climate_filter_type]]attr('entity_id', 'in',
                               entity_filter) | map(attribute='entity_id') |
                               map('area_name') | unique | reject('none') |
@@ -755,10 +775,10 @@ decluttering_templates:
                                        {{{ 'type': 'custom:mushroom-title-card', 
                                        'title': area }}},
                                 {%- set entity_filter = '[[filter]]' -%}
-                                {% set entities = states.climate |selectattr('attributes.hvac_action', 'eq','heating') | selectattr('entity_id', 'in', area_entities(area)) | [[climate_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
+                                {% set entities = states.climate | selectattr('state','eq', 'heat')  | selectattr('attributes.hvac_action', '!=', 'idle') | selectattr('entity_id', 'in', area_entities(area)) | [[climate_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
                                 {%- set ns.entities_on = ns.entities_on + entities | map(attribute='entity_id') | list -%}
                                   {%- for entity in entities -%}
-                                       {{{ 'type': 'custom:mushroom-climate-card', 
+                                       {{{ 'type': '[[climate_card_type]]', 
                                        'entity': entity.entity_id }}},
                                 {%- endfor -%}
                               {%- endfor -%}    
@@ -803,7 +823,7 @@ decluttering_templates:
                     {% set entities = states.lock | selectattr('state','eq', 'unlocked') | selectattr('entity_id', 'in', area_entities(area)) | [[lock_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
                     {%- set ns.entities_on = ns.entities_on + entities  | length | int-%}
                   {%- endfor -%}
-                    {{ns.entities_on}} an
+                    {{ns.entities_on}} [[state_open]]
                 icon: mdi:lock-open
                 layout: vertical
                 tap_action:
@@ -814,16 +834,17 @@ decluttering_templates:
                       title: '[[lock_title]]'
                       content:
                         type: custom:mod-card
-                        card_mod:
-                          style:
-                            .: |
-                              ha-card {
-                                --ha-card-border-width: 0;
-                                --ha-card-background: none; } 
                         card:
                           type: custom:auto-entities
                           card:
                             type: entities
+                            card_mod:
+                              style:
+                                .: |
+                                  ha-card
+                                     {
+                                       border-style: hidden !important;
+                                     }                            
                           filter:
                             template: >-
                               {%- set entity_filter = '[[filter]]' -%}  {%- set
@@ -842,7 +863,7 @@ decluttering_templates:
                                 {% set entities = states.lock | selectattr('state','eq', 'unlocked') | selectattr('entity_id', 'in', area_entities(area)) | [[lock_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
                                 {%- set ns.entities_on = ns.entities_on + entities | map(attribute='entity_id') | list -%}
                                   {%- for entity in entities -%}
-                                       {{{ 'type': 'custom:mushroom-lock-card', 
+                                       {{{ 'type': '[[lock_card_type]]', 
                                        'entity': entity.entity_id }}},
                                 {%- endfor -%}
                               {%- endfor -%}    
@@ -887,7 +908,7 @@ decluttering_templates:
                     {% set entities = states.vacuum | selectattr('state','eq', 'cleaning') | selectattr('entity_id', 'in', area_entities(area)) | [[vacuum_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
                     {%- set ns.entities_on = ns.entities_on + entities  | length | int-%}
                   {%- endfor -%}
-                    {{ns.entities_on}} an
+                    {{ns.entities_on}} [[state_on]]
                 icon: mdi:robot-vacuum
                 layout: vertical
                 tap_action:
@@ -898,16 +919,17 @@ decluttering_templates:
                       title: '[[vacuum_title]]'
                       content:
                         type: custom:mod-card
-                        card_mod:
-                          style:
-                            .: |
-                              ha-card {
-                                --ha-card-border-width: 0;
-                                --ha-card-background: none; } 
                         card:
                           type: custom:auto-entities
                           card:
                             type: entities
+                            card_mod:
+                              style:
+                                .: |
+                                  ha-card
+                                     {
+                                       border-style: hidden !important;
+                                     }                            
                           filter:
                             template: >-
                               {%- set entity_filter = '[[filter]]' -%}  {%- set
@@ -926,8 +948,18 @@ decluttering_templates:
                                 {% set entities = states.vacuum | selectattr('state','eq', 'cleaning') | selectattr('entity_id', 'in', area_entities(area)) | [[vacuum_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
                                 {%- set ns.entities_on = ns.entities_on + entities | map(attribute='entity_id') | list -%}
                                   {%- for entity in entities -%}
-                                       {{{ 'type': 'custom:mushroom-vacuum-card', 
-                                       'entity': entity.entity_id }}},
+                                       {{{ 'type': '[[vacuum_card_type]]', 
+                                       'entity': entity.entity_id,
+                                       'show_temperature_control': 'true',
+                                       'collapsible_controls': 'true',
+                                       'hvac_modes':
+                                        ['off',
+                                         'auto',
+                                         'heat',
+                                         'heat_cool',
+                                         'cool',
+                                        'dry',
+                                        'fan_only',],}}},
                                 {%- endfor -%}
                               {%- endfor -%}     
           - type: custom:auto-entities
@@ -970,7 +1002,7 @@ decluttering_templates:
                     {% set entities = states.fan | selectattr('state','eq', 'on') | selectattr('entity_id', 'in', area_entities(area)) | [[fan_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
                     {%- set ns.entities_on = ns.entities_on + entities  | length | int-%}
                   {%- endfor -%}
-                    {{ns.entities_on}} an
+                    {{ns.entities_on}} [[state_on]]
                 icon: mdi:fan
                 layout: vertical
                 tap_action:
@@ -981,16 +1013,17 @@ decluttering_templates:
                       title: '[[fan_title]]'
                       content:
                         type: custom:mod-card
-                        card_mod:
-                          style:
-                            .: |
-                              ha-card {
-                                --ha-card-border-width: 0;
-                                --ha-card-background: none; } 
                         card:
                           type: custom:auto-entities
                           card:
                             type: entities
+                            card_mod:
+                              style:
+                                .: |
+                                  ha-card
+                                     {
+                                       border-style: hidden !important;
+                                     }                            
                           filter:
                             template: >-
                               {%- set entity_filter = '[[filter]]' -%}  {%- set
@@ -1008,10 +1041,10 @@ decluttering_templates:
                                 {% set entities = states.fan | selectattr('state','eq', 'on') | selectattr('entity_id', 'in', area_entities(area)) | [[fan_filter_type]]attr('entity_id', 'in', entity_filter) | list -%}
                                 {%- set ns.entities_on = ns.entities_on + entities | map(attribute='entity_id') | list -%}
                                   {%- for entity in entities -%}
-                                       {{{ 'type': 'custom:mushroom-fan-card', 
+                                       {{{ 'type': '[[fan_card_type]]', 
                                        'entity': entity.entity_id }}},
                                 {%- endfor -%}
-                              {%- endfor -%}                              
+                              {%- endfor -%}         
                                         
   auto_room:
     default:
@@ -1035,6 +1068,7 @@ decluttering_templates:
       - vacuum_title: Vacuum
       - fan_title: Fan
       - select_title: Select
+      - light_card_type: custom:mushroom-light-card
     card:
       type: custom:layout-card
       layout_type: grid
@@ -1093,7 +1127,7 @@ decluttering_templates:
                 domain)  | [[light_filter_type]]attr('entity_id', 'in',
                 entity_filter) | list -%}                
                    {%- for entity in entities  -%}
-                        {{{ 'type': 'custom:mushroom-light-card', 
+                        {{{ 'type': '[[light_card_type]]', 
                             'entity': entity.entity_id,
                             'use_light_color': 'true',
                             'show_brightness_control': 'true',
@@ -1690,7 +1724,7 @@ decluttering_templates:
           }        
       tap_action:
         action: navigate
-        navigation_path: /auto-dash/[[path]]
+        navigation_path: /bourners-dashboard/[[path]]
       double_tap_action:
         action: call-service
         service: light.toggle
@@ -1795,6 +1829,7 @@ decluttering_templates:
                 entity: '[[climate]]'
                 attribute: hvac_action
                 value: 'off'
+
 {% endraw %}
 {% endhighlight %}
 
