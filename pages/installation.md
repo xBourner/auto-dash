@@ -1876,3 +1876,5 @@ Now it should look something like this:
 
 ![image](https://github.com/xBourner/auto-dash/assets/64064679/c5fddf83-5ad1-4ab4-958f-b18bac6cd4c8)
 
+Please follow the steps under [Configuration](https://xbourner.github.io/auto-dash/pages/configuration/configuration.html) to see whats next.
+
