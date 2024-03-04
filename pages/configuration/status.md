@@ -31,7 +31,7 @@ Currently supported entity domains:
 
 ## Status Card Configuration
 
-###Variables:
+### Variables:
 
 | Variable | Option | Requirement | Default | Description |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
