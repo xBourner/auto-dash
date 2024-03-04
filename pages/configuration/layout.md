@@ -52,7 +52,6 @@ Add a subview for the desired floor. Add a navigation action like shown in code:
 
 
 ```yaml
-cards:
   - type: custom:mushroom-template-card
     view_layout:
       grid-area: floor1
@@ -62,6 +61,9 @@ cards:
       action: navigate
       navigation_path: /auto-dash/floor1
 ```
+
+Or by adding via gui editor:
+![image](https://github.com/xBourner/auto-dash/assets/64064679/470aee36-c16b-4800-846c-516128a77c30)
 
 Name it like you want. The only required thing is to use the correct grid area naming. 
 Add floor1, floor2 or floor3 to the area to show the card at the correct place.
