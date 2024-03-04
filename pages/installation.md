@@ -1866,11 +1866,11 @@ views:
                 "floor3 floor3 ."
                 "room1 room2 room3" 
                 "room4 room5 room6"
-cards:
-  - type: custom:decluttering-card
-    view_layout:
-      grid-area: header
-    template: header_card        
+        cards:
+          - type: custom:decluttering-card
+            view_layout:
+              grid-area: header
+            template: header_card     
 {% endraw %}
 {% endhighlight %}
 
