@@ -1719,6 +1719,11 @@ decluttering_templates:
       info_entities:
         - entity: '[[light]]'
           show_icon: true
+        - entity: '[[window]]'
+          show_icon: true
+          icon:
+            state_on: mdi:window-open-variant
+            state_off: mdi:window-closed-variant          
         - entity: '[[switch]]'
           show_icon: true
           icon: mdi:power-plug
@@ -1772,11 +1777,6 @@ decluttering_templates:
                 value: 'off'
         - entity: '[[lock]]'
           show_icon: true
-        - entity: '[[window]]'
-          show_icon: true
-          icon:
-            state_on: mdi:window-open-variant
-            state_off: mdi:window-closed-variant
       rows:
         - entities:
             - entity: sun.sun
