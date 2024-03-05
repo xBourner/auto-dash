@@ -24,10 +24,10 @@ Please read all config/installation pages carefully. Start from introduction and
 
 Here is the latest screenshot of the progress.
 
-![image](https://github.com/xBourner/auto-dash/assets/64064679/ebfd9222-07fc-43db-bff6-0101f1661871)
+![image](https://github.com/xBourner/auto-dash/assets/64064679/f1e1ca2b-5e6c-447f-9cc8-ab3e46cf2ce3)
 
-![image](https://github.com/xBourner/auto-dash/assets/64064679/dbc8c671-1e97-40b7-88b0-03c208216367)
 
+![image](https://github.com/xBourner/auto-dash/assets/64064679/31cc9403-2658-4d79-bec4-11b9cb377f15)
 
 
 ## Credit
