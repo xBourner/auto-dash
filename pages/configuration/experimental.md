@@ -48,7 +48,10 @@ Add this template to your raw config editor (in the decluttering template sectio
               line-height: 1.75rem !important; 
               font-weight: 600;
               font-family: "Open Sans", sans-serif !important;
-          }  
+          } 
+          .entities-info-row .entity.icon-entity {
+            --paper-item-icon-color: var(--secondary-text-color) !important;
+          }              
           .entities-row .entity {
               margin-top:-10px;
               margin-right:5px !important;
