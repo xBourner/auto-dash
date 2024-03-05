@@ -1679,6 +1679,9 @@ decluttering_templates:
               margin-top:-10px;
               margin-right:5px !important;
           }
+          .entities-info-row .entity.icon-entity {
+            --paper-item-icon-color: var(--secondary-text-color) !important;
+          }              
           .entity span:last-child {
               font-size: 0.875rem !important;
               line-height: 1.25rem !important;
