@@ -1705,7 +1705,7 @@ decluttering_templates:
           }        
       tap_action:
         action: navigate
-        navigation_path: /bourners-dashboard/[[path]]
+        navigation_path: /auto-dash/[[path]]
       double_tap_action:
         action: call-service
         service: light.toggle
