@@ -8,7 +8,7 @@ parent: Configuration
 # Experimental
 
 Support for having rooms/areas next to the room cards. 
-Only on big screens. On mobile its hidden and youn are redirected to the default room view.
+Only on big screens. On mobile its hidden and you get are redirected to the default room view.
 
 Its based on many conditional cards with media query.
 
