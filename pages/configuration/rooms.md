@@ -26,7 +26,7 @@ Choose Subview if you want to hide it from top bar.
 
 Also specify the path to the same path in the room card.
 
-Variables:
+### Variables:
 
 | Variable | Option | Requirement | Default | Description |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -52,31 +52,17 @@ Variables:
 | binary_filter_type | select/reject| optional | reject | Define the filter type for binary_sensor entities |
 | vacuum_title | string| optional | Vacuum | Define the title for vacuum entities |
 | vacuum_filter_type | select/reject| optional | reject | Define the filter type for vacuum entities |
+| light_card_type | card type | optional | custom:mushroom-light-card | Define the card type for light entities |
+| media_player_card_type | card type | optional | custom:mushroom-media-player-card | Define the card type for media player entities |
+| climate_card_type | card type | optional | custom:mushroom-climate-card | Define the card type for climate entities |
+| switch_card_type | card type | optional | custom:mushroom-entity-card | Define the card type for switch entities |
+| sensor_card_type | card type | optional | custom:mushroom-entity-card | Define the card type for sensor entities |
+| input_boolean_card_type | card type | optional | custom:mushroom-entity-card | Define the card type for input boolean entities |
+| binary_sensor_card_type | card type | optional | custom:mushroom-entity-card | Define the card type for binary sensor entities |
+| lock_card_type | card type | optional | custom:mushroom-lock-card | Define the card type for lock entities |
+| vacuum_card_type | card type | optional | custom:mushroom-vacuum-card | Define the card type for vacuum entities |
+| fan_card_type | card type | optional | custom:mushroom-fan-card | Define the card type for fan entities |
 
-
-
-Default Variables:
-
-      - light_filter_type: reject
-      - media_filter_type: reject
-      - climate_filter_type: reject
-      - switch_filter_type: reject
-      - sensor_filter_type: reject
-      - boolean_filter_type: reject
-      - binary_filter_type: reject
-      - vacuum_filter_type: reject
-      - fan_filter_type: reject
-      - select_filter_type: reject
-      - light_title: Lights
-      - media_title: Media
-      - climate_title: Climate
-      - switch_title: Switch
-      - sensor_title: Sensor
-      - boolean_title: Input Boolean
-      - binary_title: Binary Sensor
-      - vacuum_title: Vacuum
-      - fan_title: Fan
-      - select_title: Select
 
 You can change the variables to the one you want. 
 
