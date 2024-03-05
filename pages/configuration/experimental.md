@@ -199,11 +199,6 @@ Then add a changed grid layout card with this code:
 title: Grid layout
 type: custom:layout-card
 layout_type: custom:grid-layout
-cards:
-  - type: custom:decluttering-card
-    view_layout:
-      grid-area: header
-    template: header_card
 layout:
   grid-template-columns: repeat(9, minmax(0px, 1fr))
   grid-template-rows: auto
@@ -248,7 +243,12 @@ layout:
         "favorit favorit ."
         "floor1 floor2 floor3"     
         "room1 room2 room3" 
-        "room4 room5 room6" 
+        "room4 room5 room6"
+cards:
+  - type: custom:decluttering-card
+    view_layout:
+      grid-area: header
+    template: header_card
 
 
 ```
