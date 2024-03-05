@@ -244,3 +244,39 @@ It should look like this:
     view_layout:
       grid-area: buro
 ```
+
+Also add some kind of conditional card that only shows the correct room when its selected from your input_select.room_select.
+
+```yaml
+  - type: vertical-stack
+    view_layout:
+      grid-area: card
+      show:
+        mediaquery: '(min-width: 1200px)'
+    cards:
+      - type: conditional
+        conditions:
+          - condition: state
+            entity: input_select.room_select
+            state: Wohnzimmer
+        card:
+          type: custom:decluttering-card
+          template: auto_room
+          variables:
+            - area: Wohnzimmer
+            - switch_filter_type: select
+            - select_filter_type: select
+            - sensor_filter_type: select
+            - media_title: Medien
+            - light_title: Licht
+            - climate_title: Klima
+            - switch_title: Schalter
+            - filter: >-
+                light.stehlampe_1 light.stehlampe_2 light.wohnzimmer
+                climate.wohnzimmer
+                binary_sensor.wohnzimmer_fenstersensor_battery_low
+                sensor.wohnzimmer_multisensor_temperature
+                sensor.wohnzimmer_multisensor_humidity
+                binary_sensor.wohnzimmer_balkontur_battery_low
+                binary_sensor.wohnzimmer_microphone
+```
