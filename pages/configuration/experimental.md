@@ -12,7 +12,7 @@ Only on big screens. On mobile its hidden and you get are redirected to the defa
 
 Its based on many conditional cards with media query.
 
-![image](https://github.com/xBourner/auto-dash/assets/64064679/ef5d5394-edfd-4587-9c69-7dfe5acc64d3)
+![image](https://github.com/xBourner/auto-dash/assets/64064679/cac3cc6c-a9bc-49e5-a273-3bc16337b5b6)
 
 
 Add a input select helper to toggle around the rooms. Add all the room names to that input select.
