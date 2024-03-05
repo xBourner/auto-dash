@@ -193,59 +193,68 @@ Add this template to your raw config editor (in the decluttering template sectio
 
 </details>
 
-Then add two condtional cards based on screen size.
-The all_in_one template should be used on desktop and the deafult room-card should be used on mobile.
-
-It should look like this:
+Then add a changed grid layout card with this code:
 
 ```yaml
-  - type: conditional
+title: Grid layout
+type: custom:layout-card
+layout_type: custom:grid-layout
+cards:
+  - type: custom:decluttering-card
     view_layout:
-      grid-area: buro
-    conditions:
-      - condition: screen
-        media_query: '(min-width: 1280px)'
-    card:
-      type: custom:decluttering-card
-      template: room_card_all_in_one
-      variables:
-        - room: Büro
-        - path: buro
-        - light: light.lichtgruppe_buero_2
-        - icon: fapro:workspace#fullcolor
-        - motion: binary_sensor.buro_bewegungsmelder_occupancy
-        - media: media_player.buro
-        - temperature: sensor.buro_multisensor_temperature
-        - humidity: sensor.buro_multisensor_humidity
-        - window: binary_sensor.buro_fenstersensor_contact
-        - climate: climate.buro_homekit
-        - vacuum: vacuum.dreame_bot_l10_pro
-        - switch: switch.buero_pc
-  - type: conditional
-    conditions:
-      - condition: screen
-        media_query: '(min-width: 0px) and (max-width: 767px)'
-    card:
-      type: custom:decluttering-card
-      template: room_card
-      variables:
-        - room: Büro
-        - path: buro
-        - light: light.lichtgruppe_buero_2
-        - icon: fapro:workspace#fullcolor
-        - motion: binary_sensor.buro_bewegungsmelder_occupancy
-        - media: media_player.buro
-        - temperature: sensor.buro_multisensor_temperature
-        - humidity: sensor.buro_multisensor_humidity
-        - window: binary_sensor.buro_fenstersensor_contact
-        - climate: climate.buro_homekit
-        - vacuum: vacuum.dreame_bot_l10_pro
-        - switch: switch.buero_pc
-    view_layout:
-      grid-area: buro
+      grid-area: header
+    template: header_card
+layout:
+  grid-template-columns: repeat(9, minmax(0px, 1fr))
+  grid-template-rows: auto
+  grid-template-areas: |
+    "header header header card card card card card card"
+    "status status status card card card card card card"
+    "favorit favorit . card card card card card card"
+    "floor1 floor2 floor3 card card card card card card"
+    "room1 room2 room3 card card card card card card"
+    "room4 room5 room6 card card card card card card"  
+    "footer footer footer card card card card card card" 
+  mediaquery:
+    '(max-width: 600px)':
+      grid-template-columns: repeat(2, minmax(0px, 1fr))
+      grid-template-areas: |
+        "header header"
+        "status status"
+        "favorit favorit"
+        "floor1 floor1"
+        "floor2 floor2"
+        "floor3 floor3"
+        "room1 room2" 
+        "room3 room4" 
+        "room5 room6" 
+    '(max-width: 1000px)':
+      grid-template-columns: repeat(2, minmax(0px, 1fr))
+      grid-template-areas: |
+        "header header" 
+        "status status"
+        "favorit favorit"
+        "floor1 floor1"
+        "floor2 floor2"
+        "floor3 floor3"        
+        "room1 room2" 
+        "room3 room4" 
+        "room5 room6"
+    '(max-width: 1200px)':
+      grid-template-columns: repeat(3, minmax(0px, 1fr))
+      grid-template-areas: |
+        "header header ." 
+        "status status ."
+        "favorit favorit ."
+        "floor1 floor2 floor3"     
+        "room1 room2 room3" 
+        "room4 room5 room6" 
+
+
 ```
 
-Also add some kind of conditional card that only shows the correct room when its selected from your input_select.room_select.
+Then add a vertical stack with conditional cards which will show the selected area you seletc in your input_select.room_select. <br><br>
+This will only show the cards on desktops or devices with more than 1200px.
 
 ```yaml
   - type: vertical-stack
@@ -262,21 +271,37 @@ Also add some kind of conditional card that only shows the correct room when its
         card:
           type: custom:decluttering-card
           template: auto_room
-          variables:
-            - area: Wohnzimmer
-            - switch_filter_type: select
-            - select_filter_type: select
-            - sensor_filter_type: select
-            - media_title: Medien
-            - light_title: Licht
-            - climate_title: Klima
-            - switch_title: Schalter
-            - filter: >-
-                light.stehlampe_1 light.stehlampe_2 light.wohnzimmer
-                climate.wohnzimmer
-                binary_sensor.wohnzimmer_fenstersensor_battery_low
-                sensor.wohnzimmer_multisensor_temperature
-                sensor.wohnzimmer_multisensor_humidity
-                binary_sensor.wohnzimmer_balkontur_battery_low
-                binary_sensor.wohnzimmer_microphone
+      - type: conditional
+        conditions:
+          - condition: state
+            entity: input_select.room_select
+            state: Schlafzimmer
+        card:
+          type: custom:decluttering-card
+          template: auto_room
+```
+
+Last step you need to add more conditional cards to change the click behaviour on desktops and mobile devices. <br><br>
+Please not that the template "room_card_all_in_one" is used on desktops. When you click on desktops it will toggle the input_select. <br><br>
+The template "room_card" will navigate to a subview.
+
+```yaml
+  - type: conditional
+    view_layout:
+      grid-area: room1
+    conditions:
+      - condition: screen
+        media_query: '(min-width: 1280px)'
+    card:
+      type: custom:decluttering-card
+      template: room_card_all_in_one
+  - type: conditional
+    view_layout:
+      grid-area: room1
+    conditions:
+      - condition: screen
+        media_query: '(min-width: 0px) and (max-width: 767px)'
+    card:
+      type: custom:decluttering-card
+      template: room_card
 ```
