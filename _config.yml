@@ -30,3 +30,184 @@ back_to_top_text: "Back to top"
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
 last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+
+
+
+######
+button_card_templates:
+  weather_dashboard_blueprint_heading:
+    show_icon: false
+    styles:
+      card:
+        - box-shadow: none
+        - background: transparent
+        - width: 100px
+      name:
+        - font-weight: bold
+        - justify-self: center
+        - font-size: 16px
+        - padding-left: 1px
+decluttering_templates:
+  room_card:
+    default:
+      - climate: climate.study
+    card:
+      type: custom:room-card
+      card_mod:
+        style: |
+          ha-card {
+            min-height:180px;
+          }
+          .card-header .title{
+              --mdc-icon-size: 55px;
+          }
+          .card-header{
+              margin-bottom: auto;
+          } 
+          .entity span {
+              font-size: 1.125rem !important;
+              line-height: 1.75rem !important; 
+              font-weight: 600;
+              font-family: "Open Sans", sans-serif !important;
+          }  
+          .entities-row .entity {
+              margin-top:-10px;
+              margin-right:5px !important;
+          }
+          .entities-info-row .entity.icon-entity {
+            --paper-item-icon-color: var(--secondary-text-color) !important;
+          }              
+          .entity span:last-child {
+              font-size: 0.875rem !important;
+              line-height: 1.25rem !important;
+              color: rgb(155, 155, 155);
+              font-family: "Open Sans", sans-serif !important;
+          } 
+          .entities-row:nth-child(3) .entity:nth-child(1):after{
+              content: " - ";
+          }      
+          .entities-row:nth-child(4) span:last-child:before {
+              content: " (";
+          } 
+          .entities-row:nth-child(4) span:last-child:after {
+              content: "°C)";
+          }     
+          .card-header .entities-info-row{
+              padding: 0px !important;
+              right: 5px !important;
+              top: 1px !important;
+              flex-flow: column !important;
+          }   
+          .entities-info-row .entity.icon-entity {
+            margin-bottom: -20px;
+          }        
+      tap_action:
+        action: navigate
+        navigation_path: /auto-dash/[[path]]
+      double_tap_action:
+        action: call-service
+        service: light.toggle
+        data: {}
+        target:
+          entity_id: '[[light]]'
+      title: null
+      entity: null
+      icon: '[[icon]]'
+      show_icon: true
+      info_entities:
+        - entity: '[[light]]'
+          show_icon: true
+        - entity: '[[window]]'
+          show_icon: true
+          icon:
+            state_on: mdi:window-open-variant
+            state_off: mdi:window-closed-variant
+        - entity: '[[switch]]'
+          show_icon: true
+          icon: mdi:power-plug
+          hide_if:
+            conditions:
+              - condition: equals
+                entity: '[[switch]]'
+                value: 'off'
+        - entity: '[[motion]]'
+          show_icon: true
+          hide_if:
+            conditions:
+              - condition: equals
+                entity: '[[motion]]'
+                value: 'off'
+        - entity: '[[vacuum]]'
+          show_icon: true
+          hide_if:
+            conditions:
+              - condition: equals
+                entity: '[[vacuum]]'
+                value: idle
+              - condition: equals
+                entity: '[[vacuum]]'
+                value: docked
+        - entity: '[[media]]'
+          show_icon: true
+          icon: mdi:speaker
+          hide_if:
+            conditions:
+              - condition: equals
+                entity: '[[media]]'
+                value: idle
+              - condition: equals
+                entity: '[[media]]'
+                value: paused
+        - entity: '[[media_group]]'
+          show_icon: true
+          icon: mdi:speaker
+          hide_if:
+            conditions:
+              - condition: equals
+                entity: '[[media_group]]'
+                value: 'off'
+        - entity: '[[door]]'
+          show_icon: true
+          hide_if:
+            conditions:
+              - condition: equals
+                entity: '[[door]]'
+                value: 'off'
+        - entity: '[[lock]]'
+          show_icon: true
+      rows:
+        - entities:
+            - entity: sun.sun
+              name: '[[room]]'
+              show_icon: false
+              show_name: true
+              tap_action:
+                action: none
+        - entities:
+            - entity: '[[temperature]]'
+              show_name: false
+              show_icon: false
+              show_state: true
+            - entity: '[[humidity]]'
+              show_name: false
+              show_icon: false
+              show_state: true
+        - entities:
+            - entity: '[[climate]]'
+              attribute: temperature
+              show_icon: false
+              show_name: false
+              show_state: true
+          hide_if:
+            conditions:
+              - condition: equals
+                entity: '[[climate]]'
+                attribute: hvac_action
+                value: idle
+              - condition: equals
+                entity: '[[climate]]'
+                attribute: hvac_action
+                value: 'off'
+
+                ######
